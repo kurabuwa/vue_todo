@@ -26,7 +26,7 @@ export default {
   router-linkについて
     ページを遷移させるタグ。aタグに変換されるがデフォルトの挙動を制御できる。to属性では遷移先のパスを指定する。
 ・sync
-  親でdataを管理していてv-modelを使った双方向バインディングができないので、その代わりにsyncを使う。syncは省略したもので、
+  親でdataを管理していてv-modelを使った双方向バインディングができないので、その代わりにsyncを使う。、
  -->
 <style lang="scss" scoped>
 .page-description {
