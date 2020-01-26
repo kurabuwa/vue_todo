@@ -31,3 +31,19 @@ new Vue({
   //   return createElement(myApp)
   // }
 });
+/*
+・ルートファイルのindex.jsについて
+  ルーティングのファイルを変更してVuexを使うためstoreをimportした。また、コンポーネントのファイルもVuex用のファイルに変更した。Vueインスタンスの部分でstoreを使えるようにした。
+
+・課題の説明
+  ・Naviの追加について
+    todoRouterのところからファイルをコピーして一番親のコンポーネントのcontainersの中のファイルにインポートしてwarpperの下の行にNaviコンポーネントを配置した。
+
+  ・エラーなどの修正
+    まずエラーのカスタムタグにv-ifを使ってエラーがない時兵頭しないようにした。この時storeのファイルのstateに定義されていたエラーと空のメッセージを消した。空のリストの方はlistコンポーネントが表示されない時に表示されるようにv-elseを使った。また、空のメッセージの方はmutationでそれぞれに応じたメッセージを入れるためletによって新しく定義されていたemptyMessageをstateに定義していたemptyMessageの値が変わるように修正した。
+
+  ・削除の追加
+    まずlistItemでボタンを押した時発火するようにしてactionを発火させるdispacthを使い、引数にtodo.idを渡した。その後actionにあるdeletTodoで通信が成功した時の動作をmutattionに定義した、そのmutationにはdeleteして帰ってきたdataをtodosに置き換えている。
+
+    そのほかaxiosで通信をする際成功した時エラーメッセージを初期化するようにした。
+*/
